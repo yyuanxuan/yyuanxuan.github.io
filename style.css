@@ -590,6 +590,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	box-shadow:0px 1px 4px #D5D5D5;
 	font-size:13px;
 }
+.more-info-btn{
+	background-color:#D5D5D5;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -599,10 +602,10 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .bgc-white{
 	background-color:#FFFFFF;
 }
-.bgc-white-2{
-	background-color:rgba(255,255,255,0.50);
-}
 .bgc-platinum{
+	background-color:#EAEAEA;
+}
+.bgc-platinum-2{
 	background-color:#EAEAEA;
 }
 .bgc-prussian-blue{
@@ -621,20 +624,20 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 /* Button colour styles */
 
 .btn-boston-university-red{
-	background:#C80008;
+	background:#C91600;
 	color:#FFFFFF!important;
 }
 .btn-boston-university-red:hover{
-	background:#a00006!important;
+	background:#a11200!important;
 	color:#FFFFFF!important;
 }
-.btn-white{
-	background:rgba(255,255,255,0.50);
-	color:rgba(0,0,0,.5)!important;
+.btn-black{
+	background:#000000;
+	color:#FFFFFF!important;
 }
-.btn-white:hover{
-	background:#cccccc!important;
-	color:rgba(0,0,0,.5)!important;
+.btn-black:hover{
+	background:#000000!important;
+	color:#FFFFFF!important;
 }
 
 /* Link colour styles */
