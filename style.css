@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 	Yuanxuan Yang
-	About: A shiny new Blocs website.
+	About: Website of Yuanxuan Yang, my research and portfolio
 	Author: yuanxuan
 	Version: 1.0
 	Built with Blocs
@@ -168,6 +168,9 @@ a:hover{text-decoration: none; cursor:pointer;}
 
 .voffset{
 	margin-top:30px;
+}
+.voffset-md{
+	margin-top:50px;
 }
 
 
@@ -484,7 +487,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:Alef;
 }
 .proj-names{
-	font-family:"Lato";
+	font-family:"Alef";
 	font-weight:300;
 }
 .oa-btn{
@@ -505,6 +508,39 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .p-bloc-0-style{
 	width:28.8%;
+}
+.oa-link{
+	background:linear-gradient(66deg, #75D5FF 0%, #72FCD5 100%);
+	font-family:"Vollkorn";
+	font-weight:300;
+	font-size:12px;
+	box-shadow:0px 4px 5px #75D5FF;
+}
+.illustration-section-title{
+	font-size:55px;
+}
+.p-bloc-4-style{
+	font-family:Alef;
+}
+.con-awards{
+	background:linear-gradient(60deg, #9437FF 0%, #FF89D8 100%);
+	font-size:12px;
+	font-family:"Vollkorn";
+}
+.proj-persons{
+	font-family:"Ubuntu";
+	font-weight:300;
+	color:#797979!important;
+	font-size:12px;
+}
+.menu-text{
+	color:#000000!important;
+	font-family:"Vollkorn";
+	font-weight:300;
+}
+.h1-style{
+	font-family:Arvo;
+	font-size:50px;
 }
 
 /* = Colour
@@ -545,6 +581,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .btn-cornflower-blue:hover{
 	background:#457ec7!important;
 	color:#FFFFFF!important;
+}
+
+/* Link colour styles */
+
+.ltc-black{
+	color:#000000!important;
+}
+.ltc-black:hover{
+	color:#000000!important;
 }
 
 /* Icon colour styles */
@@ -647,6 +692,11 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	.mt-md-0{
 	}
 	.mt-md-4{
+	}
+	
+	/* MD Row Margin Offsets */
+	.voffset-md{
+		margin-top:30px;
 	}
 	
 }
