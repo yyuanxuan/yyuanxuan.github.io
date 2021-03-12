@@ -432,9 +432,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-size:62px;
 }
 .img-style{
-	width:480px;
 	border-style:_popUpItemAction:;
 	border-color:#5E5E5E!important;
+	width:150px;
 	border-radius:12px 12px 12px 12px;
 }
 .h4-style{
