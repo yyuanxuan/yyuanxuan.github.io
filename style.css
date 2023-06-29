@@ -16,6 +16,8 @@ body{
 .page-container{overflow: hidden;} /* Prevents unwanted scroll space when scroll FX used. */
 a,button{transition: background .3s ease-in-out;outline: none!important;} /* Prevent blue selection glow on Chrome and Safari */
 a:hover{text-decoration: none; cursor:pointer;}
+.scroll-fx-lock-init{position:fixed!important;top: 0;bottom: 0;left: :0;right: 0;z-index:99999;} /* ScrollFX Lock */
+.blocs-grid-container{display: grid!important;grid-template-columns: 1fr 1fr;grid-template-rows: auto auto;column-gap: 1.5rem;row-gap: 1.5rem;} /* CSS Grid */
 
 
 /* Preloader */
@@ -190,6 +192,39 @@ a:hover{text-decoration: none; cursor:pointer;}
 	z-index:1000;
 	box-shadow:0 1px 2px rgba(0,0,0,.3);
 	 transition: all .2s ease-out;
+}
+/* Navbar Icon */
+.svg-menu-icon{
+	fill: none;
+	stroke: rgba(0,0,0,0.5);
+	stroke-width: 2px;
+	fill-rule: evenodd;
+}
+.navbar-dark .svg-menu-icon{
+	stroke: rgba(255,255,255,0.5);
+}
+.menu-icon-thin-bars{
+	stroke-width: 1px;
+}
+.menu-icon-thick-bars{
+	stroke-width: 5px;
+}
+.menu-icon-rounded-bars{
+	stroke-width: 3px;
+	stroke-linecap: round;
+}
+.menu-icon-filled{
+	fill: rgba(0,0,0,0.5);
+	stroke-width: 0px;
+}
+.navbar-dark .menu-icon-filled{
+	fill: rgba(255,255,255,0.5);
+}
+.navbar-toggler-icon{
+	background: none!important;
+	pointer-events: none;
+	width: 33px;
+	height: 33px;
 }
 /* Handle Multi Level Navigation */
 .dropdown-menu .dropdown-menu{
@@ -426,20 +461,6 @@ a[data-lightbox]:hover img{
 	pointer-events:none;
 }
 
-/* Framless */
-.frameless-lb{
-	border-radius: 0;
-	border:none;
-}
-.frameless-lb .modal-body{
-	padding:0;
-}
-.frameless-lb .lightbox-caption{
-	left:0;
-	right:0;
-	bottom:-16px;
-}
-
 /* = Custom Styling
 -------------------------------------------------------------- */
 
@@ -646,68 +667,100 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 /* = Colour
 -------------------------------------------------------------- */
 
+/* Swatch Variables */
+:root{
+	
+	--swatch-var-6336:#C91600;
+	
+	--swatch-var-6405:#000000;
+	
+	--swatch-var-Unnamed-Swatch:#FFFFFF;
+	
+	--swatch-var-Unnamed-Swatch-copy-1:#EAEAEA;
+	
+	--swatch-var-Unnamed-Swatch-copy-2:#183A56;
+	
+	--swatch-var-Unnamed-Swatch-copy-3:#183A56;
+	
+	--swatch-var-Unnamed-Swatch-Copy:#EAEAEA;
+	
+	--swatch-var-4520:#000000;
+	
+	--swatch-var-Unnamed-Swatch-Copy-copy-1:#165E64;
+	
+	--swatch-var-Unnamed-Swatch-copy-4:#577592;
+	
+	--swatch-var-Unnamed-Swatch-copy-5:rgba(0,0,0,0.2);
+	
+	--swatch-var-Unnamed-Swatch-copy-6:rgba(255,255,255,0.498039);
+	
+	--swatch-var-Unnamed-Swatch-Copy-copy-2:#75D5FF;
+	
+}
+
+
 /* Background colour styles */
 
-.bgc-white{
-	background-color:#FFFFFF;
+.bgc-2941{
+	background-color:var(--swatch-var-Unnamed-Swatch);
 }
-.bgc-platinum{
-	background-color:#EAEAEA;
+.bgc-6140{
+	background-color:var(--swatch-var-Unnamed-Swatch-Copy);
 }
-.bgc-prussian-blue{
-	background-color:#183A56;
+.bgc-2752{
+	background-color:var(--swatch-var-Unnamed-Swatch-copy-2);
 }
 
 /* Text colour styles */
 
-.tc-black{
-	color:#000000!important;
+.tc-6405{
+	color:var(--swatch-var-6405)!important;
 }
-.tc-white{
-	color:#FFFFFF!important;
+.tc-2941{
+	color:var(--swatch-var-Unnamed-Swatch)!important;
 }
 
 /* Button colour styles */
 
-.btn-boston-university-red{
-	background:#C91600;
+.btn-c-6336{
+	background:var(--swatch-var-6336);
 	color:#FFFFFF!important;
 }
-.btn-boston-university-red:hover{
-	background:#a11200!important;
+.btn-c-6336:hover{
+	background:#960000!important;
 	color:#FFFFFF!important;
 }
-.btn-black{
-	background:#000000;
+.btn-c-6405{
+	background:var(--swatch-var-6405);
 	color:#FFFFFF!important;
 }
-.btn-black:hover{
+.btn-c-6405:hover{
 	background:#000000!important;
 	color:#FFFFFF!important;
 }
 
 /* Link colour styles */
 
-.ltc-black{
-	color:#000000!important;
+.ltc-6405{
+	color:var(--swatch-var-6405)!important;
 }
-.ltc-black:hover{
+.ltc-6405:hover{
 	color:#000000!important;
 }
 
 /* Icon colour styles */
 
-.icon-black{
-	color:#000000!important;
-	border-color:#000000!important;
+.icon-6405{
+	color:var(--swatch-var-6405)!important;
+	border-color:var(--swatch-var-6405)!important;
 }
-.icon-black-2{
-	color:rgba(0,0,0,0.2)!important;
-	border-color:rgba(0,0,0,0.2)!important;
+.icon-5783{
+	color:var(--swatch-var-Unnamed-Swatch-copy-5)!important;
+	border-color:var(--swatch-var-Unnamed-Swatch-copy-5)!important;
 }
-.icon-platinum{
-	color:#EAEAEA!important;
-	border-color:#EAEAEA!important;
+.icon-6140{
+	color:var(--swatch-var-Unnamed-Swatch-Copy)!important;
+	border-color:var(--swatch-var-Unnamed-Swatch-Copy)!important;
 }
 
 /* Bloc image backgrounds */
