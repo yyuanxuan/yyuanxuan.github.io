@@ -1,348 +1,363 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
 <head>
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	<meta name="robots" content="index, follow">
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css?5414">
-	<link rel="stylesheet" type="text/css" href="style.css?8048">
-	<link rel="stylesheet" type="text/css" href="./css/animate.min.css?3522">
-	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/ionicons.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Domine&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Alef&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Vollkorn&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Arvo&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Ubuntu&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <title>Yuanxuan Yang - Home</title>
-
-
-    
-<!-- Analytics -->
- 
-<!-- Analytics END -->
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yuanxuan Yang — Lecturer in Data Science of Transport, Institute for Transport Studies, University of Leeds. Transport equity, spatial data science, urban mobility.">
+  <title>Yuanxuan Yang | University of Leeds</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- Preloader -->
-<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
-<!-- Preloader END -->
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar">
+  <div class="nav-brand-pill mono">YUANXUAN YANG</div>
 
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
 
-<!-- Main container -->
-<div class="page-container">
-    
-<!-- bloc-0 -->
-<div class="bloc none sticky-nav bgc-2941 l-bloc " id="bloc-0">
-	<div class="container bloc-sm">
-		<div class="row">
-			<div class="col">
-				<nav class="navbar navbar-light row navbar-expand-md" role="navigation">
-					<a class="navbar-brand link-style animated pulse-hvr" href="index.html">Y Yang</a>
-					<button id="nav-toggle" type="button" class="ml-auto ui-navbar-toggler navbar-toggler border-0 p-0" data-toggle="collapse" data-target=".navbar-36807" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32" width="32"><path class="svg-menu-icon " d="m2 9h28m-28 7h28m-28 7h28"></path></svg></span>
-					</button>
-					<div class="collapse navbar-collapse navbar-36807">
-							<ul class="site-navigation nav navbar-nav ml-auto menu-text">
-								<li class="nav-item">
-									<a href="index.html" class="nav-link a-btn ltc-6405">Home</a>
-								</li>
-								<li class="nav-item">
-									<a href="research.html" class="a-btn nav-link ltc-6405">Research</a>
-								</li>
-								<li class="nav-item">
-									<a href="bits.html" class="a-btn nav-link ltc-6405">Bits</a>
-								</li>
-								<li class="nav-item">
-									<a href="https://medium.com/@yuanxuanyang " class="nav-link a-btn ltc-6405" target="_blank">Blog</a>
-								</li>
-								<li class="nav-item">
-									<a href="https://docs.google.com/document/d/18-qCuh7GVcpk4A3nAidkXRn_5UZtdFm0e0xXTD0k55A/edit?usp=sharing" class="nav-link a-btn ltc-6405" target="_blank">CV</a>
-								</li>
-							</ul>
-						</div>
-				</nav>
-			</div>
-		</div>
-	</div>
+  <div class="nav-links-pill" id="nav-links">
+    <a href="index.html" class="active">About</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+
+  <a class="nav-cta" href="mailto:Y.Yang6@leeds.ac.uk">Email</a>
+</nav>
+
+<!-- ===================== HERO ======================= -->
+<div class="hero fade-in-up" style="animation-delay:0.1s">
+
+  <!-- Globe animation (smaller than reference: 320px) -->
+  <div class="globe-wrap">
+    <div id="hero-canvas"></div>
+  </div>
+
+  <!-- Name + Bio row -->
+  <div class="hero-info-grid fade-in-up" style="animation-delay:0.35s">
+    <!-- Left: name & title -->
+    <div>
+      <h1 class="hero-name">
+        Yuanxuan Yang<span class="hero-chinese">杨源譞</span>
+      </h1>
+      <div class="hero-meta">
+        <span class="hero-meta-title">Lecturer in Data Science of Transport</span>
+        <span class="hero-meta-affil">
+          <a href="https://environment.leeds.ac.uk/transport" target="_blank" rel="noopener">Institute for Transport Studies</a>,
+          University of Leeds
+        </span>
+      </div>
+    </div>
+
+    <!-- Right: bio + links -->
+    <div class="hero-right-content">
+      <p class="hero-bio">
+        I use spatial data science and computational methods to understand
+        <strong style="color:var(--text);font-weight:600">mobility inequality</strong> in cities —
+        who gets access to good transport, which neighbourhoods are systematically underserved,
+        and what new forms of data can reveal about the people and places that conventional
+        transport analysis leaves behind.
+      </p>
+      <div class="hero-social">
+        <a class="social-link" href="mailto:Y.Yang6@leeds.ac.uk">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          EMAIL
+        </a>
+        <a class="social-link" href="https://scholar.google.com/citations?user=splm_IUAAAAJ" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+          SCHOLAR
+        </a>
+        <a class="social-link" href="https://orcid.org/0000-0002-7970-2544" target="_blank" rel="noopener">ORCID</a>
+        <a class="social-link" href="https://github.com/yyuanxuan" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GITHUB
+        </a>
+        <a class="social-link" href="https://x.com/yyuanxuan" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.733-8.835L1.254 2.25H8.08l4.261 5.631 5.903-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @YYUANXUAN
+        </a>
+        <a class="social-link" href="https://environment.leeds.ac.uk/transport/staff/9888/dr-yuanxuan-yang" target="_blank" rel="noopener">LEEDS PROFILE</a>
+      </div>
+      <div>
+        <span class="scroll-hint">SCROLL TO EXPLORE ↓</span>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- bloc-0 END -->
 
-<!-- bloc-0 -->
-<div class="bloc tc-6405 l-bloc" id="bloc-0">
-	<div class="container bloc-lg-lg">
-		<div class="row">
-			<div class="col-sm-8 flash-hvr">
-				<h3 class="h3-style tc-6405 text-lg-left mg-clear">
-					Hi, I’m<br>Yuanxuan Yang<br>
-				</h3>
-				<p class="mg-clear text-lg-left p-bloc-0-style">
-					/juɑːnʃein/
-				</p>
-				<p class="p-style mg-clear">
-					I am currently a Research Fellow at the Institute for Transport Studies, University of Leeds.<br>My research interests include: <strong>Mobility</strong>, <strong>Geodemographics</strong>, <strong>GeoComputation</strong>, <strong>Urban Analytics</strong>, <strong>Graph Theory</strong> and <strong>Data Visualisation</strong>.<br><br>You can reach me at <a class="links-text" href="mailto:y.yang6@leeds.ac.uk">y.yang6@leeds.ac.uk</a>, or twitter <a class="links-text" href="https://twitter.com/yyuanxuan" target="_blank">@yyuanxuan</a><br>Let's get in touch!<br><br>
-				</p>
-				<div class="divider-h divider-style">
-				</div>
-				<div class="container-div-style d-sm-block d-none">
-					<div class="row row-style voffset">
-						<div class="col col-lg-3">
-							<a href="https://docs.google.com/document/d/18-qCuh7GVcpk4A3nAidkXRn_5UZtdFm0e0xXTD0k55A/edit?usp=sharing" class="btn btn-c-6336 btn-style-2 animated pulse-hvr btn-style" target="_blank">CV <br></a>
-						</div>
-						<div class="col align-self-end">
-							<div class="text-center">
-								<a href="https://twitter.com/yyuanxuan" target="_blank"><span class="icon-md fab fa-twitter-square animated pulse-hvr icon-6405"></span></a>
-							</div>
-						</div>
-						<div class="col align-self-end">
-							<div class="text-center">
-								<a href="https://github.com/yyuanxuan" target="_blank"><span class="icon-md fab fa-github-alt animated pulse-hvr icon-6405"></span></a>
-							</div>
-						</div>
-						<div class="col align-self-end">
-							<div class="text-center">
-								<a href="https://scholar.google.co.uk/citations?user=splm_IUAAAAJ&amp;hl=en&amp;oi=ao" target="_blank"><span class="ion ion-university animated pulse-hvr icon-6405 icon-md"></span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<picture><source type="image/webp" srcset="img/lazyload-ph.png" data-srcset="img/IMG_0155-color.webp"><img class="img-fluid img-protected img-style img-protected img-rd-lg float-lg-none lazyload" src="img/lazyload-ph.png" data-src="img/IMG_0155-color.jpg" alt="IMG_0155_black"></picture>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col offset-lg-0 order-lg-0">
-				<div>
-					<div class="row voffset-lg">
-						<div class="col-12">
-							<div class="text-center">
-								<a href="#" data-scroll-speed="1000" onclick="scrollToTarget('0',this)"><span class="fa fa-angle-down icon-md animated bounce animDelay08 icon-5783"></span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-0 END -->
+<!-- ===================== MAIN ======================= -->
+<main>
 
-<!-- bloc-2 -->
-<div class="bloc none l-bloc" id="bloc-2">
-	<div class="container bloc-md-lg">
-		<div class="row">
-			<div class="col">
-				<h3 class="mg-md h3-journal-papers-style tc-6405">
-					Selected Journal Papers
-				</h3>
-				<div class="row">
-					<div class="offset-lg-0 col-lg-8">
-						<p class="p-8-style">
-							Please visit my <a class="links-text " href="https://scholar.google.co.uk/citations?user=splm_IUAAAAJ&amp;hl=en&amp;oi=ao" target="_blank">google scholar page</a> for a full list<br>
-						</p>
-						<p class="p-bloc-4-style">
-							Yang, Y., Heppenstall, A., Turner, A., &amp; Comber, A. (2020). Using graph structural information about flows to enhance short-term demand prediction in bike-sharing systems. Computers, Environment and Urban Systems, 83, 101521.&nbsp;<br><a class="oa-link" href="https://www.sciencedirect.com/science/article/pii/S0198971520302544" target="_blank">[Open Access]</a>&nbsp;<br><br>Yang, Y., Heppenstall, A., Turner, A., &amp; Comber, A. (2019). A spatiotemporal and graph-based analysis of dockless bike sharing patterns to understand urban flows over the last mile. Computers, Environment and Urban Systems, 77, 101361.<br><a class="oa-link" href="https://www.sciencedirect.com/user/identity/landing?code=i9sXUoFk-q8A89qEDwhRVcAL4fyo_jcykKFre2gU&amp;state=retryCounter%3D0%26csrfToken%3D656df372-391f-49cf-b26b-fafebff3adfd%26idpPolicy%3Durn%253Acom%253Aelsevier%253Aidp%253Apolicy%253Aproduct%253Ainst_assoc%26returnUrl%3D%252Fscience%252Farticle%252Fpii%252FS0198971519301516%26prompt%3Dnone%26cid%3Darp-2128778f-8e19-40c0-ad16-ceca69e0726a" target="_blank">[Open Access]</a><br><br>Yang, Y., Heppenstall, A., Turner, A., &amp; Comber, A. (2019). Who, where, why and when? Using smart card and social media data to understand urban mobility. ISPRS International Journal of Geo-Information, 8(6), 271.<br>&nbsp;<a class="oa-link" href="https://www.mdpi.com/2220-9964/8/6/271" target="_blank">[Open Access]</a><br>
-						</p>
-					</div>
-					<div class="align-self-center scroll-fx-right-in col-lg-4">
-						<img src="img/lazyload-ph.png" data-src="img/slide_on_graphic_chart.svg" class="img-fluid img-protected mx-auto d-block img-open-ma-style lazyload" alt="open_maps">
-						<div class="row">
-							<div class="col">
-								<div>
-									<div class="text-center text-lg-center">
-										<a href="research.html" class="btn btn-c-6336 btn-style-2 animated pulse-hvr">Papers &amp; Research<br></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-						<div class="divider-h divider-style">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row voffset-md">
-			<div class="col-md-6 animSpeedLazy">
-				<h4 class="mg-md h4-education-style tc-6405">
-					EDUCATION
-				</h4>
-				<ul class="list-unstyled">
-					<li>
-						<div class="row">
-							<div class="col-lg-2">
-								<img class="img-fluid img-protected img-unnam-style lazyload" src="img/lazyload-ph.png" data-src="img/University_of_Leeds_crest.svg" alt="unnamed">
-							</div>
-							<div class="col">
-								<h5 class="h5-style mg-sm tc-6405">
-									University of Leeds
-								</h5>
-								<p class="p-bloc-2-style">
-									2016-2021 Ph.D<br>Geography
-								</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="row">
-							<div class="offset-lg--1 col-lg-2">
-								<picture><source type="image/webp" srcset="img/lazyload-ph.png" data-srcset="img/230px-CUMT_logo.webp"><img class="img-fluid img-protected img-230px-cumt-lo-style lazyload" src="img/lazyload-ph.png" data-src="img/230px-CUMT_logo.jpg" alt="230px CUMT_logo"></picture>
-							</div>
-							<div class="col">
-								<h5 class="h5-style mg-sm tc-6405">
-									China University of Mining and Technology
-								</h5>
-								<p class="p-bloc-2-style">
-									2013-2016 Msc&nbsp;<br>Cartography and Geographical Information Engineering
-								</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="row">
-							<div class="col-lg-2">
-								<picture><source type="image/webp" srcset="img/lazyload-ph.png" data-srcset="img/230px-CUMT_logo.webp"><img class="img-fluid img-protected img-230px-cumt-lo-style lazyload" src="img/lazyload-ph.png" data-src="img/230px-CUMT_logo.jpg" alt="230px CUMT_logo"></picture>
-							</div>
-							<div class="col">
-								<h5 class="h5-style mg-sm tc-6405">
-									China University of Mining and Technology
-								</h5>
-								<p class="p-bloc-2-style">
-									2009-2013 BSc<br>Cartography and Geographical Information Science<br>2009-2013 Minor degree<br>Civil Engineering<br>
-								</p>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-6">
-				<h4 class="mg-md h4-style tc-6405">
-					WORK EXPERIENCE
-				</h4>
-				<ul class="list-unstyled">
-					<li>
-						<div class="row">
-							<div class="col-lg-2">
-								<img class="img-fluid img-protected img-bloc-2-style lazyload" src="img/lazyload-ph.png" data-src="img/University_of_Leeds_crest.svg" alt="University_of_Leeds_crest">
-							</div>
-							<div class="col">
-								<h5 class="h5-style mg-sm tc-6405">
-									University of Leeds
-								</h5>
-								<p class="p-bloc-2-style">
-									2021-Present<br>Research Fellow
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-2">
-								<picture><source type="image/webp" srcset="img/lazyload-ph.png" data-srcset="img/Screenshot%202021-03-10%20at%2023.23.52.webp"><img class="img-fluid img-protected img-bloc-2-style lazyload" src="img/lazyload-ph.png" data-src="img/Screenshot%202021-03-10%20at%2023.23.52.png" alt="Screenshot%202021 03-10%20at%2023.23.52"></picture>
-							</div>
-							<div class="col">
-								<h5 class="h5-style mg-sm tc-6405">
-									University of Liverpool
-								</h5>
-								<p class="p-bloc-2-style">
-									2020-2021<br>Research Associate
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-2">
-								<img class="img-fluid img-protected img-unnam-style lazyload" src="img/lazyload-ph.png" data-src="img/University_of_Leeds_crest.svg" alt="unnamed">
-							</div>
-							<div class="col">
-								<h5 class="h5-style mg-sm tc-6405">
-									University of Leeds
-								</h5>
-								<p class="p-bloc-2-style">
-									2017-2020&nbsp;<br>Teaching Assistant
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-2">
-								<picture><source type="image/webp" srcset="img/lazyload-ph.png" data-srcset="img/ngcc.webp"><img class="img-fluid img-protected img-unnam-style lazyload" src="img/lazyload-ph.png" data-src="img/ngcc.png" alt="unnamed"></picture>
-							</div>
-							<div class="col">
-								<h5 class="h5-style mg-sm tc-6405">
-									National Geomatics Center of China
-								</h5>
-								<p class="p-bloc-2-style">
-									2014-2015&nbsp;<br>Intern
-								</p>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-2 END -->
+  <!-- 01 / RESEARCH ------------------------------------------------ -->
+  <section id="research">
+    <div class="container">
+      <div class="section-label">
+        <span class="num">01</span><span class="sep">/</span><span class="name">RESEARCH</span>
+      </div>
+      <div class="section-intro">
+        <h2>Research interests.</h2>
+        <p>Combining computational methods with transport policy questions — producing both new analytical tools and findings directly useful for practice.</p>
+      </div>
+      <div class="interests-grid">
 
-<!-- ScrollToTop Button -->
-<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13"/></svg></a>
-<!-- ScrollToTop Button END-->
+        <div class="interest-card">
+          <div class="interest-num">01 / EQUITY</div>
+          <h3>Transport Equity &amp; Mobility Inequality</h3>
+          <p>Understanding how urban transport systems produce and reproduce spatial inequality — who is systematically excluded from mobility, which places are underserved, and what high-resolution data can reveal about the gap between provision and genuine need.</p>
+          <div class="interest-tags">
+            <span class="interest-tag">SPATIAL INEQUALITY</span>
+            <span class="interest-tag">GEODEMOGRAPHICS</span>
+            <span class="interest-tag">ACCESS</span>
+          </div>
+        </div>
 
+        <div class="interest-card">
+          <div class="interest-num">02 / METHODS</div>
+          <h3>Spatial Data Science &amp; Computation</h3>
+          <p>Developing and applying computational methods — graph-based network analysis, geospatial machine learning, spatiotemporal trajectory analysis, and large language models — to extract insight from complex urban and transport datasets.</p>
+          <div class="interest-tags">
+            <span class="interest-tag">GRAPH ANALYSIS</span>
+            <span class="interest-tag">MACHINE LEARNING</span>
+            <span class="interest-tag">TRAJECTORIES</span>
+          </div>
+        </div>
 
-<!-- bloc-6 -->
-<div class="bloc bg-t-edge bloc-bg-texture texture-geometry-shapes tc-2941 bgc-2752 d-bloc" id="bloc-6">
-	<div class="container bloc-lg bloc-lg-lg">
-		<div class="row row-bloc-6-style">
-			<div class="col-md-2 offset-md-3 col-sm-4 order-lg-0 offset-lg-0 col-lg-1">
-				<div class="text-center">
-					<a href="https://twitter.com/yyuanxuan" target="_blank"><span class="fab fa-twitter-square icon-md icon-6140"></span></a>
-				</div>
-			</div>
-			<div class="col-md-2 col-sm-4 col-lg-1">
-				<div class="text-center">
-					<a href="https://github.com/yyuanxuan" target="_blank"><span class="icon-md fab fa-github-square icon-6140"></span></a>
-				</div>
-			</div>
-			<div class="col-md-2 col-sm-4 col-lg-1">
-				<div class="text-center">
-					<a href="mailto:y.yang@leeds.ac.uk"><span class="icon-md fa fa-envelope-square icon-6140"></span></a>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-				<p class="float-lg-right p-14-style mg-md text-lg-left">
-					Designed and hand-crafted, with ❤️ &nbsp;by Yuanxuan Yang&nbsp;<br>Powered by ☕️ and GitHub Pages&nbsp;<br>
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-6 END -->
+        <div class="interest-card">
+          <div class="interest-num">03 / SYSTEMS</div>
+          <h3>Emerging &amp; Sustainable Transport</h3>
+          <p>Examining adoption, behaviour, and well-being outcomes across new forms of urban mobility — shared bikes, e-scooters, and beyond — with a focus on who benefits and how inclusive design can support sustainability transitions.</p>
+          <div class="interest-tags">
+            <span class="interest-tag">BIKE SHARING</span>
+            <span class="interest-tag">E-SCOOTERS</span>
+            <span class="interest-tag">WELL-BEING</span>
+          </div>
+        </div>
 
-</div>
-<!-- Main container END -->
-    
+      </div>
+      <a class="view-all-link" href="research.html">VIEW FULL RESEARCH →</a>
+    </div>
+  </section>
 
+  <!-- 02 / PUBLICATIONS ------------------------------------------- -->
+  <section id="publications">
+    <div class="container">
+      <div class="section-label">
+        <span class="num">02</span><span class="sep">/</span><span class="name">SELECTED PUBLICATIONS</span>
+      </div>
+      <div class="section-intro">
+        <h2>Selected publications.</h2>
+        <p>First-author papers in high-impact journals. My name is highlighted in each author list.</p>
+      </div>
+      <div id="recent-pub-list" class="pub-list">
+        <!-- Rendered by JS from data/publications.js (featured: true) -->
+      </div>
+      <a class="view-all-link" href="publications.html">VIEW ALL PUBLICATIONS →</a>
+    </div>
+  </section>
 
-<!-- Additional JS -->
-<script src="./js/jquery.min.js?8468"></script>
-<script src="./js/bootstrap.bundle.min.js?3282"></script>
-<script src="./js/blocs.min.js?9998"></script>
-<script src="./js/lazysizes.min.js" defer></script>
-<script src="./js/waves.js?3129"></script>
-<script src="./js/particles.min.js?6971"></script>
-<script src="./js/scrollFX.js?8546"></script>
-<!-- Additional JS END -->
+  <!-- 03 / PROJECTS ----------------------------------------------- -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">
+        <span class="num">03</span><span class="sep">/</span><span class="name">PROJECTS</span>
+      </div>
+      <div class="section-intro">
+        <h2>Research projects.</h2>
+        <p>Active and past funded projects and collaborations.</p>
+      </div>
+      <div id="project-grid-home" class="projects-grid">
+        <!-- Rendered by JS from data/projects.js -->
+      </div>
+      <a class="view-all-link" href="research.html#projects">VIEW ON RESEARCH PAGE →</a>
+    </div>
+  </section>
 
+  <!-- 04 / CONTACT ------------------------------------------------- -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">
+        <span class="num">04</span><span class="sep">/</span><span class="name">CONTACT</span>
+      </div>
 
+      <div class="contact-grid">
+        <div>
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <p><a href="mailto:Y.Yang6@leeds.ac.uk">Y.Yang6@leeds.ac.uk</a></p>
+          </div>
+          <div class="contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <p>Room 2.14, Institute for Transport Studies<br>34–40 University Road, Leeds LS2 9JT</p>
+          </div>
+        </div>
+        <div class="contact-profiles">
+          <a class="profile-link" href="https://scholar.google.com/citations?user=splm_IUAAAAJ" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 110-14 7 7 0 010 14zm0-24L0 9.5l4.838 3.94A8 8 0 0112 9a8 8 0 017.162 4.44L24 9.5z"/></svg>
+            Google Scholar
+          </a>
+          <a class="profile-link" href="https://orcid.org/0000-0002-7970-2544" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 01-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.872-2.484 3.872-3.722 0-2.016-1.113-3.722-3.884-3.722h-2.285z"/></svg>
+            ORCID 0000-0002-7970-2544
+          </a>
+          <a class="profile-link" href="https://www.researchgate.net/profile/Yuanxuan-Yang" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 00-.112.437 8.365 8.365 0 00-.078.53 9.754 9.754 0 00-.032.693c-.01.338-.01.5 0 .688.02.247.05.472.078.692.022.153.06.3.112.437.244.744.65 1.303 1.213 1.68.565.375 1.255.565 2.073.565.818 0 1.508-.19 2.073-.565.563-.377.97-.936 1.213-1.68.052-.137.09-.284.112-.437.028-.22.058-.445.078-.692.01-.188.01-.35 0-.688a9.754 9.754 0 00-.032-.693 8.365 8.365 0 00-.078-.53 3.22 3.22 0 00-.112-.437C21.565.936 21.159.377 20.596 0 20.031 0 19.586 0 19.586 0zM.004 24h3.399V8.84H.004zm1.7-17.174a1.975 1.975 0 010-3.95 1.975 1.975 0 010 3.95zM7.208 24h3.265v-8.3c0-1.246.238-2.174.714-2.786.476-.612 1.137-.918 1.98-.918.745 0 1.334.253 1.763.76.429.505.643 1.204.643 2.098V24h3.28v-9.888c0-1.916-.472-3.388-1.414-4.416-.942-1.028-2.197-1.542-3.764-1.542-1.006 0-1.887.25-2.64.747-.75.499-1.326 1.204-1.727 2.12h-.1l-.143-2.536H7.208V24z"/></svg>
+            ResearchGate
+          </a>
+          <a class="profile-link" href="https://github.com/yyuanxuan" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub / yyuanxuan
+          </a>
+          <a class="profile-link" href="https://www.linkedin.com/in/yuanxuan-yang-b78865107/" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="footer-card">
+    <div class="footer-top">
+      <div>
+        <div class="footer-tag">UNIVERSITY OF LEEDS · ITS</div>
+        <div class="footer-brand">Yuanxuan Yang.</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="mailto:Y.Yang6@leeds.ac.uk">Email</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> YUANXUAN YANG. ALL RIGHTS RESERVED.</span>
+      <span>INSTITUTE FOR TRANSPORT STUDIES // LEEDS LS2 9JT</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bottom-accent"></div>
+
+<!-- ===================== SCRIPTS ==================== -->
+<script>
+/* --- Three.js Globe Animation (adapted from STRATA design) --- */
+const initGlobe = () => {
+  const container = document.getElementById('hero-canvas');
+  if (!container || typeof THREE === 'undefined') return;
+
+  const scene    = new THREE.Scene();
+  scene.background = new THREE.Color(0xffffff);
+
+  const camera   = new THREE.PerspectiveCamera(45, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(container.offsetWidth, container.offsetHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  container.appendChild(renderer.domElement);
+  camera.position.z = 200;
+
+  /* Wireframe sphere */
+  const R = 70;
+  const sphereGeo  = new THREE.SphereGeometry(R, 32, 32);
+  const wireframe  = new THREE.WireframeGeometry(sphereGeo);
+  const lineMat    = new THREE.LineBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.1 });
+  const sphereLine = new THREE.LineSegments(wireframe, lineMat);
+  scene.add(sphereLine);
+
+  /* Research cities */
+  const cities = [
+    { name: 'Leeds',     lat: 53.80, lon: -1.55 },
+    { name: 'London',    lat: 51.51, lon: -0.13 },
+    { name: 'Shenzhen',  lat: 22.54, lon: 114.06 },
+    { name: 'Liverpool', lat: 53.41, lon: -2.99 },
+    { name: 'Beijing',   lat: 39.90, lon: 116.40 },
+  ];
+
+  const toVec3 = (lat, lon, r) => {
+    const phi   = (90 - lat) * (Math.PI / 180);
+    const theta = (lon + 180) * (Math.PI / 180);
+    return new THREE.Vector3(
+      -r * Math.sin(phi) * Math.cos(theta),
+       r * Math.cos(phi),
+       r * Math.sin(phi) * Math.sin(theta)
+    );
+  };
+
+  const hubGroup = new THREE.Group();
+  scene.add(hubGroup);
+
+  cities.forEach(c => {
+    const pos    = toVec3(c.lat, c.lon, R);
+    const dotGeo = new THREE.SphereGeometry(2, 12, 12);
+    const dotMat = new THREE.MeshBasicMaterial({ color: 0x111111 });
+    const dot    = new THREE.Mesh(dotGeo, dotMat);
+    dot.position.copy(pos);
+    hubGroup.add(dot);
+  });
+
+  /* Arc connections + animated spark */
+  const arcMat = new THREE.LineBasicMaterial({ color: 0x111111, transparent: true, opacity: 0.3 });
+  const activeArcs = [];
+
+  const makeArc = (a, b) => {
+    const start = toVec3(a.lat, a.lon, R);
+    const end   = toVec3(b.lat, b.lon, R);
+    const mid   = new THREE.Vector3().addVectors(start, end).multiplyScalar(0.5);
+    mid.normalize().multiplyScalar(R + start.distanceTo(end) * 0.4);
+    const curve  = new THREE.QuadraticBezierCurve3(start, mid, end);
+    const arcGeo = new THREE.BufferGeometry().setFromPoints(curve.getPoints(50));
+    hubGroup.add(new THREE.Line(arcGeo, arcMat));
+    const sparkGeo = new THREE.SphereGeometry(1.8, 8, 8);
+    const sparkMat = new THREE.MeshBasicMaterial({ color: 0x4ADE80 });
+    const spark    = new THREE.Mesh(sparkGeo, sparkMat);
+    hubGroup.add(spark);
+    return { curve, spark, t: Math.random() };
+  };
+
+  for (let i = 0; i < cities.length; i++) {
+    for (let j = i + 1; j < cities.length; j++) {
+      if (Math.random() > 0.3) activeArcs.push(makeArc(cities[i], cities[j]));
+    }
+  }
+
+  const animate = () => {
+    requestAnimationFrame(animate);
+    sphereLine.rotation.y += 0.0008;
+    hubGroup.rotation.y   += 0.0008;
+    activeArcs.forEach(a => {
+      a.t = (a.t + 0.004) % 1;
+      a.spark.position.copy(a.curve.getPoint(a.t));
+    });
+    renderer.render(scene, camera);
+  };
+  animate();
+
+  window.addEventListener('resize', () => {
+    camera.aspect = container.offsetWidth / container.offsetHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.offsetWidth, container.offsetHeight);
+  });
+};
+
+document.addEventListener('DOMContentLoaded', initGlobe);
+</script>
+
+<!-- Nav toggle -->
+<script>
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+</script>
+
+<script src="data/publications.js"></script>
+<script src="data/projects.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Publications by Yuanxuan Yang — journal articles and conference papers on transport equity, spatial data science, and urban mobility.">
+  <title>Publications | Yuanxuan Yang</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-brand-pill mono">YUANXUAN YANG</div>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links-pill" id="nav-links">
+    <a href="index.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html" class="active">Publications</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <a class="nav-cta" href="mailto:Y.Yang6@leeds.ac.uk">Email</a>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="section-label" style="margin-bottom:1.5rem">
+      <span class="num">ALL</span><span class="sep">/</span><span class="name">PUBLICATIONS</span>
+    </div>
+    <h1>Publications.</h1>
+    <p>Journal articles and conference papers. My name is in <strong>bold</strong> in each author list.</p>
+  </div>
+</div>
+
+<main>
+  <section style="padding-top:2rem">
+    <div class="container">
+
+      <!-- Scholar / ORCID links -->
+      <div style="display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap;">
+        <a href="https://scholar.google.com/citations?user=splm_IUAAAAJ" target="_blank" rel="noopener" class="view-all-link" style="margin-top:0">GOOGLE SCHOLAR ↗</a>
+        <a href="https://orcid.org/0000-0002-7970-2544" target="_blank" rel="noopener" class="view-all-link" style="margin-top:0">ORCID ↗</a>
+      </div>
+
+      <!-- Filter -->
+      <div class="pub-filter">
+        <span class="filter-label">FILTER:</span>
+        <button class="filter-btn active" data-filter="all"        onclick="renderPublications('all')">ALL</button>
+        <button class="filter-btn"        data-filter="journal"    onclick="renderPublications('journal')">JOURNAL</button>
+        <button class="filter-btn"        data-filter="conference" onclick="renderPublications('conference')">CONFERENCE</button>
+        <span class="pub-count"></span>
+      </div>
+
+      <!-- Publications (rendered by JS) -->
+      <div id="pub-list"></div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-card">
+    <div class="footer-top">
+      <div>
+        <div class="footer-tag">UNIVERSITY OF LEEDS · ITS</div>
+        <div class="footer-brand">Yuanxuan Yang.</div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="mailto:Y.Yang6@leeds.ac.uk">Email</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> YUANXUAN YANG.</span>
+      <span>INSTITUTE FOR TRANSPORT STUDIES // LEEDS</span>
+    </div>
+  </div>
+</footer>
+<div class="bottom-accent"></div>
+
+<script>document.getElementById('nav-toggle').addEventListener('click',()=>document.getElementById('nav-links').classList.toggle('open'));</script>
+<script src="data/publications.js"></script>
+<script src="data/projects.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
