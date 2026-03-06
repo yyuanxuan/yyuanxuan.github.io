@@ -834,6 +834,24 @@ footer {
 .footer-nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .footer-nav a { font-size: 0.85rem; font-weight: 500; color: var(--text-2); transition: color 0.2s; }
 .footer-nav a:hover { color: var(--text); }
+/* Footer logos row */
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.footer-logo-crest {
+  height: 52px;
+  width: auto;
+  opacity: 0.85;
+}
+.footer-logo-new {
+  height: 28px;
+  width: auto;
+  opacity: 0.75;
+}
+
 .footer-bottom {
   background: #F3F3F3;
   border-radius: var(--radius-md);
