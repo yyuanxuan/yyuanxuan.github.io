@@ -265,13 +265,18 @@ const initGlobe = () => {
   container.appendChild(renderer.domElement);
   camera.position.z = 200;
 
+  /* Parent group — scale everything to 75% so the globe sits comfortably in the card */
+  const globeGroup = new THREE.Group();
+  globeGroup.scale.set(0.85, 0.85, 0.85);
+  scene.add(globeGroup);
+
   /* Wireframe sphere */
   const R = 70;
   const sphereGeo  = new THREE.SphereGeometry(R, 32, 32);
   const wireframe  = new THREE.WireframeGeometry(sphereGeo);
   const lineMat    = new THREE.LineBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.1 });
   const sphereLine = new THREE.LineSegments(wireframe, lineMat);
-  scene.add(sphereLine);
+  globeGroup.add(sphereLine);
 
   /* Research cities */
   const cities = [
@@ -293,7 +298,7 @@ const initGlobe = () => {
   };
 
   const hubGroup = new THREE.Group();
-  scene.add(hubGroup);
+  globeGroup.add(hubGroup);
 
   cities.forEach(c => {
     const pos    = toVec3(c.lat, c.lon, R);
@@ -331,8 +336,7 @@ const initGlobe = () => {
 
   const animate = () => {
     requestAnimationFrame(animate);
-    sphereLine.rotation.y += 0.0008;
-    hubGroup.rotation.y   += 0.0008;
+    globeGroup.rotation.y += 0.0008;
     activeArcs.forEach(a => {
       a.t = (a.t + 0.004) % 1;
       a.spark.position.copy(a.curve.getPoint(a.t));
