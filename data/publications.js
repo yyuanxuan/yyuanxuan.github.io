@@ -166,8 +166,8 @@ const PUBLICATIONS = [
     authors: "<em>Yang, Y.</em>, & Grant-Muller, S.",
     year: 2023,
     title: "Analysing ride behaviours of shared e-scooter users — a case study of Liverpool",
-    venue: "Transportation Research Board Annual Meeting 2023",
-    venueShort: "TRB",
+    venue: "CARMA 2023 - 5th International Conference on Advanced Research Methods and Analytics",
+    venueShort: "CARMA",
     type: "conference",
     tags: ["e-scooter", "shared mobility", "travel behaviour"]
   },
